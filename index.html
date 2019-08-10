@@ -8,6 +8,8 @@
   <meta name="keywords" content="Quan Geng, UIUC, Tsinghua, Google" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+  crossorigin="anonymous"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-83580270-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -51,12 +53,34 @@
 
         <p><a href="https://scholar.google.com/citations?user=d77eUbgAAAAJ" target="_blank">My Google Scholar page </a>  &nbsp;&nbsp;&nbsp;<a href="https://ai.google/research/people/QuanGeng" target="_blank">My Google AI Page </a></p>
 
-        <div style="margin-bottom:1rem;"> You might be interested in this website <a href="https://www.quanwei.tech" target="_blank">www.quanwei.tech</a> to learn about US Salary in every company and institutes, e.g., <br>
+        <div id="quanwei_links" style="margin-bottom:1rem;"> You might be interested in this website <a href="https://www.quanwei.tech" target="_blank">www.quanwei.tech</a> to learn about US Salary in every company and institutes, e.g., <br>
+    </div> 
+<script>
+
+  var companies = ['Harvard University', 'Yale University', 'Princeton University',
+  'Google', 'Facebook', 'Amazon', 'Apple Inc', 'Baidu', 'Bytedance', 'Alibaba', 'Tencent',
+  'Pony', 'Airbnb', 'Morgan Stanley', 'Goldman Sachs', 'Two Sigma',
+  'Citadel', 'PDT', 'Tower Research', 'DRW', 'Jump Operations', 'D. E. Shaw', 'Renaissance Technologies', 'McKinsey', 'Boston Consulting Group', 'Exponent'];
+
+  $(document).ready(function() {
+    console.log( "ready!" );
+
+  $.each(companies, function(key, name) {
+     var temp = $(document.createElement("a"));
+     temp.addClass(['btn', 'btn-outline-primary']);
+     temp.text(name);
+     temp.attr('href', 'https://www.quanwei.tech/?q='+name);
+     $('#quanwei_links').append(temp);
+  });
+});
+</script>
+<noscript>
 <a class="btn btn-outline-primary" href="https://www.quanwei.tech/?q=harvard%20university">Harvard University</a>
 <a class="btn btn-outline-primary" href="https://www.quanwei.tech/?q=yale%20university">Yale University</a>
 <a class="btn btn-outline-primary" href="https://www.quanwei.tech/?q=princeton%20university">Princeton University</a>
 <a class="btn btn-outline-primary" href="https://www.quanwei.tech/?q=google">Google</a>
 <a class="btn btn-outline-primary" href="https://www.quanwei.tech/?q=facebook">Facebook</a>
+<a class="btn btn-outline-primary" href="https://www.quanwei.tech/?q=facebook">Amazon</a>
 <a class="btn btn-outline-primary" href="https://www.quanwei.tech/?q=apple inc">Apple Inc</a>
 <a class="btn btn-outline-primary" href="https://www.quanwei.tech/?q=Morgan Stanley">Morgan Stanley</a>
 <a class="btn btn-outline-primary" href="https://www.quanwei.tech/?q=Goldman Sachs">Goldman Sachs</a>
@@ -68,9 +92,7 @@
 <a class="btn btn-outline-primary" href="https://www.quanwei.tech/?q=d. e. shaw">D E Shaw</a>
 <a class="btn btn-outline-primary" href="https://www.quanwei.tech/?q=renaissance%20technologies">Renaissance Technologies</a>
 <a class="btn btn-outline-primary" href="https://www.quanwei.tech/?q=McKinsey">McKinsey</a>
-<a class="btn btn-outline-primary" href="https://www.quanwei.tech/?job=trader">Trader</a>
-<a class="btn btn-outline-primary" href="https://www.quanwei.tech/?job=neurosurgeon">Neurosurgeon</a>
-</div> 
+</noscript>
       
       </section>
         
