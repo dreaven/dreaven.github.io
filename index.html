@@ -55,24 +55,26 @@
 
         <div id="quanwei_links" style="margin-bottom:1rem;"> You might be interested in this website <a href="https://www.quanwei.tech" target="_blank">www.quanwei.tech</a> to learn about US Salary in every company and institutes, e.g., <br>
     </div> 
+        
+<script src="https://d3js.org/d3.v5.min.js"></script>
 <script>
-
-  var companies = ['Harvard University', 'Yale University', 'Princeton University',
+  const companies = ['Harvard University', 'Yale University', 'Princeton University',
   'Google', 'Facebook', 'Amazon', 'Apple Inc', 'Baidu', 'Bytedance', 'Alibaba', 'Tencent',
   'Pony', 'Airbnb', 'Morgan Stanley', 'Goldman Sachs', 'Two Sigma',
   'Citadel', 'PDT', 'Tower Research', 'DRW', 'Jump Operations', 'D. E. Shaw', 'Renaissance Technologies', 'McKinsey', 'Boston Consulting Group', 'Exponent'];
 
   $(document).ready(function() {
-    console.log( "ready!" );
-
-  $.each(companies, function(key, name) {
-     var temp = $(document.createElement("a"));
-     temp.addClass(['btn', 'btn-outline-primary']);
-     temp.text(name);
-     temp.attr('href', 'https://www.quanwei.tech/?q='+name);
-     $('#quanwei_links').append(temp);
+    // console.log( "ready!" );
+    var color = d3.scaleOrdinal(d3.schemePastel1);
+    d3.select("#quanwei_links").selectAll('a')
+        .data(companies)
+        .enter()
+        .append('a')
+        .attr('href', function(d, i) {return 'https://www.quanwei.tech/?q='+d})
+        .text(function(d, i) {return d})
+        .attr('class', 'btn btn-outline-primary')
+        .style('background-color', function(d, i) {return color(i)});
   });
-});
 </script>
 <noscript>
 <a class="btn btn-outline-primary" href="https://www.quanwei.tech/?q=harvard%20university">Harvard University</a>
