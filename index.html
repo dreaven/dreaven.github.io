@@ -70,10 +70,10 @@
         .data(companies)
         .enter()
         .append('a')
-        .attr('href', function(d, i) {return 'https://www.quanwei.tech/?q='+d})
-        .text(function(d, i) {return d})
+        .attr('href', function(d, i) {return 'https://www.quanwei.tech/?q='+d;})
+        .text(function(d, i) {return d;})
         .attr('class', 'btn btn-outline-primary')
-        .style('background-color', function(d, i) {return color(i)});
+        .style('background-color', function(d, i) {return color(i);});
   });
 </script>
 <noscript>
@@ -164,19 +164,9 @@
 
         </section>
 
-        <section id="Research">
-          <div class="page-header">
-            <h4>Research Interest </h4>
-          </div>
-
-          <p> 
-            Wireless Communication, Information Theory, Differential Privacy and Whatever is Mathematically <strong>Beautiful</strong> or/and <strong>Practical</strong>
-          </p> 
-        </section>
-
         <section id="Publication">
           <div class="page-header">
-            <h4>Publication &amp; Paper </h4> 
+            <h4>Publication &amp; Papers </h4> 
           </div>
 
           <strong>Preprints</strong>
@@ -213,6 +203,8 @@
 
           <strong>Others</strong>
           <ul>
+            <li> Quan Geng, Wei Ding, Ruiqi Guo, and Sanjiv Kumar, Tight Analysis of Privacy and Utility Tradeoff in Approximate Differential Privacy <a href="papers/ISIT2019_poster.pdf" target="_blank">(poster)</a>, IEEE International Symposium on Information Theory (ISIT), 2019 </li>
+
             <li> Sundar Subramanian, Xinzhou Wu, Quan Geng, Cyril Measson, Thomas J. Richardson, and Junyi Li, <a href="http://www.google.st/patents/US20130272443" target="_blank"> Methods and apparatus to improve channel estimation in communication systems </a>, Patent No. US20130272443 A1, October 2013 </li>
 
             <li> Quan Geng and Pramod Viswanath, Interactive Interference Alignment <a href="papers/Quan_ITW2012.pdf" target="_blank"> (poster)</a>, IEEE Information Theory Workshop, September 2012 </li>
@@ -248,7 +240,6 @@
             <h4>Professional Services  </h4> 
           </div>
           <strong>I am a Reviewer of</strong>
-          <br>
           <br>
           <ul>
             <li> Thirty-third Conference on Neural Information Processing Systems (NeurIPS) 2019 </li>
